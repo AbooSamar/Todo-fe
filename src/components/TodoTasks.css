@@ -1,0 +1,71 @@
+.showtasks {
+  width: 70%;
+  min-height: 70vh; /* Minimum height */
+  max-height: auto; /* Allow it to grow */
+  overflow: hidden; /* Prevents extra space if no tasks */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between tasks */
+  margin: auto;
+}
+.task {
+  width: 100%;
+  background-color: rgb(255, 253, 253);
+  padding: 0 8px;
+  border: 1.5px solid grey;
+  border-radius: 10px;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  gap:10px
+}
+.texttask {
+  width: 80%;
+  font-size: 19px;
+  font-weight: 500;
+}
+/* .texttask .taskimg{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+} */
+.taskright {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.taskedit {
+  display: flex;
+  align-items: center;
+}
+.task input {
+  width: 20px;
+  height: 20px;
+}
+.checkbox{
+  cursor: pointer;
+  accent-color: rgb(40, 203, 15); 
+}
+.delbtn {
+  color: red;
+  cursor: pointer;
+  font-size: 25px;
+  opacity: 0.8;
+}
+.delbtn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.editbtn {
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+  opacity: 0.8;
+}
+.editbtn:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}

@@ -1,0 +1,60 @@
+.inputs{
+    width: 100%;
+    height: 70px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 12px;
+    margin-top: 5px;
+}
+.tasksinput{
+    width: 40%;
+    height: 80%;
+    outline-color: rgb(221, 78, 59);
+    border-radius: 15px;
+    border: 1px solid  rgb(221, 78, 59);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+.fileinput{
+    height: 70%;
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.inputs button{
+    width: 140px;
+    height: 50px;
+    background-color: rgb(255, 121, 58);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 4px;
+    white-space: nowrap;
+   
+}
+.inputs button:hover{
+    background-color: rgb(254, 93, 19);
+}
+
+.preview{
+    width: 120px;
+    height: 100px;
+    margin: 0 auto;
+    color: white;
+}
+.preview p{
+    height: 3%;
+}
+.preview img{
+    width: 100%;
+    height: 97%;
+    object-fit: cover;
+} 
