@@ -83,7 +83,7 @@ export const addTask = () => async (dispatch, getState) => {
     if (editingTask) {
       // Update existing task
       await axios.put(
-        `http://localhost:5050/v1/updateTask/${editingTask._id}`,
+        `https://sam-todo-be.onrender.com/v1/updateTask/${editingTask._id}`,
         {
           task: task,
 
@@ -103,7 +103,7 @@ export const addTask = () => async (dispatch, getState) => {
       dispatch(setEditingTask(null)); // Clear editing state
     } else {
       // Add new task
-      await axios.post("http://localhost:5050/v1/postTasks", {
+      await axios.post("https://sam-todo-be.onrender.com/v1/postTasks", {
         task: task,
         name: user.displayName,
         email: user.email,
@@ -167,7 +167,9 @@ export const uploadImage = () => async (dispatch, getState) => {
 // Fetch Tasks from Firestore (memoized to prevent unnecessary re-fetching)
 export const fetchData = () => async (dispatch) => {
   try {
-    const response = await axios.get("http://localhost:5050/v1/getTasks");
+    const response = await axios.get(
+      "https://sam-todo-be.onrender.com/v1/getTasks"
+    );
     dispatch(setTodoList(response.data));
     dispatch(setTaskCount(response.data.length));
   } catch (err) {
@@ -178,7 +180,9 @@ export const fetchData = () => async (dispatch) => {
 //deleting task
 export const deleteTask = (task_id) => async (dispatch) => {
   try {
-    await axios.delete(`http://localhost:5050/v1/deleteTask/${task_id}`);
+    await axios.delete(
+      `https://sam-todo-be.onrender.com/v1/deleteTask/${task_id}`
+    );
     dispatch(fetchData()); // Re-fetch the user list after deletion
   } catch (err) {
     console.log("Error in deleting task", err);
